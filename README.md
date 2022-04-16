@@ -8,8 +8,7 @@
 2. [Objetos](#objetos)
 3. [Arrays](#arrays)
 4. [Métodos de iteração](#métodos-de-iteração)
-5. [Extra: Introdução a Programação Orientada a Objeto com JS](#poo-com-javascript-introdução)
-6. [Ferramentas da semana: readline e nodemon](#readline-e-nodemon)
+5. [Ferramentas da semana: readline e nodemon](#readline-e-nodemon)
 
 ### Chamada, apresentação das monitoras e acordos
 <img src="https://i.pinimg.com/474x/b4/17/86/b41786b5e7627ed0c678a0ef4a62e9f6.jpg" alt="video chamada" width="200">
@@ -36,16 +35,16 @@ Podemos fazer isso com for, while e também com o do...while.
 
 ```
 function pulaCorda() {
-    console.log('Pulei a corda com function 1')
-    console.log('Pulei a corda com function 2')
-    console.log('Pulei a corda com function 3')
-    console.log('Pulei a corda com function 4')
-    console.log('Pulei a corda com function 5')
-    console.log('Pulei a corda com function 6')
-    console.log('Pulei a corda com function 7')
-    console.log('Pulei a corda com function 8')
-    console.log('Pulei a corda com function 9')
-    console.log('Pulei a corda com function 10')
+  console.log('Pulei a corda com function 1')
+  console.log('Pulei a corda com function 2')
+  console.log('Pulei a corda com function 3')
+  console.log('Pulei a corda com function 4')
+  console.log('Pulei a corda com function 5')
+  console.log('Pulei a corda com function 6')
+  console.log('Pulei a corda com function 7')
+  console.log('Pulei a corda com function 8')
+  console.log('Pulei a corda com function 9')
+  console.log('Pulei a corda com function 10')
 }
 
 pulaCorda();
@@ -53,7 +52,7 @@ pulaCorda();
 ```
 console.log('inicio')
 for(let i = 1; i <=3; i++) {
-    console.log(`Pulei a corda com for ${i}`)
+  console.log(`Pulei a corda com for ${i}`)
 }
 console.log('fim')
 ```
@@ -61,8 +60,8 @@ console.log('fim')
 console.log('inicio')
 let i = 1;
 while(i <=3) {
-    console.log(`Pulei a corda com while ${i}`)
-    i++
+  console.log(`Pulei a corda com while ${i}`)
+  i++
 }
 console.log('fim')
 ```
@@ -70,8 +69,8 @@ console.log('fim')
 console.log('inicio')
 let index = 1;
 do{
-    console.log(`Pulei a corda com do...while ${index}`) 
-    index++
+  console.log(`Pulei a corda com do...while ${index}`) 
+  index++
 }while(index<=3)
 console.log('fim')
 ```
@@ -117,15 +116,6 @@ while(x < 100) {
 
 }
 ```
-Vamos debugar para perceber como funciona?
-
-**Extra: ferramenta debug do VSCode**
-- clica no besouro
-- criar launch do debug
-- define a variavel no watch
-- marca o breakpoint
-- dá o play e vai apertando f10
-
 <br>
 
 
@@ -142,11 +132,11 @@ const pessoa = {
   nome: 'Ariel',
   idade: 25,
   profissao: 'desenvolvedora',
-};
+}
 ```
 
 ```javascript
-const pessoa = new Object();
+const pessoa = new Object()
 
 pessoa.nome = 'Ariel';
 pessoa.idade = 25;
@@ -178,12 +168,11 @@ const pessoa = {
   profissao: 'desenvolvedora',
 };
 
-console.log(pessoa['nome']); // Ariel
-console.log(pessoa['idade']); // 25
-console.log(pessoa['profissao']); // desenvolvedora
+console.log(pessoa['nome']) // Ariel
+console.log(pessoa['idade']) // 25
+console.log(pessoa['profissao']) // desenvolvedora
 ```
 Mais exemplos:
-
 
 Declaração de objetos
 
@@ -231,10 +220,8 @@ pokemon.peso = '6,9kg'
 Deletando propriedades
 
 ```
-delete = pokemon.peso
+delete pokemon.peso
 ```
-
-
 Atribuição via desestruturação
 
 ```js
@@ -263,9 +250,6 @@ console.log(dia, mes, ano) // 5 8 2020 🤔
 const dataFormatada = hoje.toLocaleDateString('pt-BR')
 console.log(dataFormatada) // 05/09/2020
 
-const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }
-const dataLonga = hoje.toLocaleDateString('pt-BR', options)
-console.log(dataLonga) // sábado, 5 de setembro de 2020
 ```
 MDN: [date](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Date),
 [toLocaleDateString](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleDateString)
@@ -300,204 +284,85 @@ console.log(alunasReprograma[2]) // Mariana
 
 ### Métodos de iteração
 
+- `length` retorna um número que representa o tamanho do array.
+- `push` adiciona um item na última posição do array.
 - `filter` retorna um novo array com os elementos filtrados.
 - `find` retorna o primeiro elemento que achar igual ao elemento passado por parâmetro.
-- `indexOf` retorna a posição do item passado por parâmetro ou -1 caso não tenha encontrado.
-- `length` retorna um número que representa o tamanho do array.
 - `map` retorna um novo array sem alterar o array original, criando uma cópia com as alterações que desejamos.
-- `pop` remove e retorn o último item do array.
-- `push` adiciona um item na última posição do array.
-- `shift` remove e retorna o primeiro item do array.
-- `slice` copia o array para outra variável.
-- `splice` remove o item da posição passada por parâmetro
-- `unshift` adiciona um item na primeira posição do array.
+- `sort` ordena o array
+- `reduce` reduz o array para um único valor mediante a uma operação matemática
 
-
-#### for...of
+### Exemplos
 
 ```js
-for (numero of numeros) {
-  const dobro = numero * 2
 
-  console.log(dobro)
+const alunasReprograma = ["Paula", "Maria", "Estela", "Clara"]
+
+//Quantos itens no array alunasReprograma?
+console.log(alunasReprograma.length)
+
+//Incluir um item no array
+
+const novaAluna = "Simara"
+alunasReprograma.push(novaAluna)
+
+//Acessar informações num array
+console.log(alunasReprograma[3]) //"Clara"
+
+// Operador spread (...)
+const alunasOn16 = [...alunasReprograma, "Andressa"]
+
+console.log(alunasOn16)
+
+//Metodos de iteração
+//Map
+const callback = function() {
+  console.log(aluna)
 }
-// 18
-// 4
-// 10
-```
-MDN: [for...of](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/for...of)
 
----
-#### map
-> O método `map()` invoca a função `callback` passada por argumento para cada elemento do Array e devolve um novo Array como resultado. *Fonte: [MDN map](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/map)*
+alunasOn16.map(callback()) 
 
-```js
-function dobrar(item) {
-  return item * 2
-}
 
-const numerosDobrados = numeros.map(dobrar)
+//Filter
+const numeros = [34, 45, 67, 90, 55, 76]
 
-console.log(numerosDobrados) // [18, 4, 10]
-```
+const numerosImpares = numeros.filter(numero => numero%2 !=0)
+console.log(numerosImpares)
 
-Deixando mais conciso:
+const numerosPares = numeros.filter(numero => numero%2 ==0)
+console.log(numerosPares)
 
-```js
-const numerosDobrados = numeros.map(function (item) {
-  return item * 2
+
+const produtos = ["geladeira", "fogao", "cama", "mesa"]
+
+//find
+
+const encontraCama = produtos.find(produto => produto === "cama")
+console.log(encontraCama)
+
+const encontraMesa = produtos.find(produto => produto === "mesa")
+console.log(encontraMesa)
+
+//sort - ordenação 
+
+const numerosOrdenadosCrescente = numeros.sort()
+console.log(numerosOrdenadosCrescente)
+
+const numerosOrdenadosDecrescente = numeros.sort((a,b)=> b-a)
+console.log(numerosOrdenadosDecrescente)
+
+
+//reduce - reduz nosso array a um resultado de uma operação matemática
+
+const numbers = [1,34,35]
+
+const soma = numbers.reduce((valorAnterior, valorAtual)=> {
+    return valorAnterior + valorAtual
 })
 
-console.log(numerosDobrados) // [18, 4, 10]
+console.log(soma) //70
+
 ```
-
-Refatorando para JS moderno:
-
-```js
-const numerosDobrados = numeros.map(item => item * 2)
-
-console.log(numerosDobrados) // [18, 4, 10]
-```
-
-Obs: o método `map` não alterar o array original. Ele retorna um array novo com o resultado do `map`.
-
----
-
-#### find
-
-> O método find executa a função callback uma vez para cada elemento presente no array até que encontre um onde callback  retorne o valor true. Se o elemento é encontrado, find retorna imediatamente o valor deste elemento. Caso contrário, find retorna undefined. *Fonte MDN: [find](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/find)*
-
-```js
-function procuraCinco(item) {
-  return item === 5
-}
-
-const achouCinco = numeros.find(procuraCinco)
-
-console.log(achouCinco) // 5
-```
-
----
-
-#### filter
-
-```js
-function impar(item) {
-  return item % 2 !== 0
-}
-
-const numerosImpares = numeros.filter(impar)
-```
-
-Deixando mais conciso:
-
-```js
-const numerosImpares = numeros.filter(function (item) {
-  return item % 2 !== 0
-})
-```
-
-Refatorando para JS moderno:
-
-```js
-const numerosImpares = numeros.filter(item => item % 2 !== 0)
-
-console.log(numerosImpares) // [9, 5]
-```
-
-Obs: o método `filter` não altera o array original. Ele retorna um array novo com o resultado do `filter`.
-
-MDN: [filter]()
-
----
-
-#### sort
-O método `sort` recebe uma função de callback opcional. Caso a função não seja fornecida, o array segue a ordenação dos caracteres Unicode.
-> Se o parâmetro funcaoDeComparacao é fornecido, o array será ordenado de acordo com o valor de retorno da funcaoDeComparacao. Considerando que a e b são dois elementos sendo comparados, então:
->  - Se `funcaoDeComparacao(a, b)` for menor que 0, ordena `a` para um índice anterior a `b`, i.e. `a` vem primeiro.
->  - Se `funcaoDeComparacao(a, b)` retornar 0, deixa `a` e `b` inalterados em relação um ao outro, mas ordenado em relação a todos os outros elementos.
->  - Se `funcaoDeComparacao(a, b)` é maior que 0, ordena `b` para um índice anterior que `a`. `funcaoDeComparacao(a, b)` sempre deve retornar o mesmo valor dado um par específico de elementos `a` e `b` como seus dois parâmetros. Se resultados inconsistentes são retornados, então a ordenação é indefinida.
->
-> *Fonte MDN: [sort](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/sort)*
-
-
-```js
-
-let numeros = [ 5, 9, 2]
-function funcaoDeComparacao(a, b) {
-  
-  if (a < b) {
-    return -1 // ao retornar valor negativo, a ordem fica [a, b]
-  } else if (a > b) {
-    return 1 // ao retornar valor positivo, a ordem fica [b, a]
-  } else {
-    return 0 // ao retornar valor nulo, a ordem permanece [a, b]
-  }
-}
-
-numeros.sort(funcaoDeComparacao)
-
-console.log(numeros) // [2, 5, 9]
-```
-
-Deixando mais conciso:
-
-```js
-function funcaoDeComparacao(a, b) {
-  return a - b
-}
-
-numeros.sort(funcaoDeComparacao)
-
-console.log(numeros) // [2, 5, 9]
-```
-
-Refatorando para JS moderno:
-
-```js
-numeros.sort((a, b) => a - b)
-
-console.log(numeros) // [2, 5, 9]
-```
-
-**Obs: o método `sort` altera o array original!**
-
----
-
-#### reduce
-
-O método `reduce` recebe uma função callback com alguns parâmetros e essa função é executada a cada elemento presente no array. O resultado é a redução do array a um valor só. Normalmente, utilizamos os dois primeiros parâmetros: `acumulador` e `itemAtual`.
-
-Por exemplo, podemos executar a soma de todos os valores do array utilizando o método `reduce`:
-
-```js
-function somarTodos(acumulador, itemAtual) {
-  return acumulador + itemAtual
-}
-
-const numerosSomados = numeros.reduce(somarTodos)
-
-console.log(numerosSomados) // 16
-```
-
-Deixando mais conciso:
-
-```js
-const numerosSomados = numeros.reduce(function (acumulador, itemAtual) {
-  return acumulador + itemAtual
-})
-
-console.log(numerosSomados) // 16
-```
-
-Refatorando para JS moderno:
-
-```js
-const numerosSomados = numeros.reduce((acumulador, itemAtual) => acumulador + itemAtual)
-
-console.log(numerosSomados) // 16
-```
----
 ## Readline e Nodemon
 
 - Readline-sync é um pacote maravilhoso para pegar inputs no terminal, ou seja pegar entradas de dados no sistema. Se você veio de programação front-end isso equivale a pegar o value do input de um usuário num formulário.

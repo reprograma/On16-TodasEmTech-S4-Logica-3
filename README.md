@@ -393,7 +393,7 @@ Comportamento do sistema:
 
 - deverá ser possível buscar alunas pela localidade
 - caso a pessoa usuária escolha não buscar por localidade, deverá mostrar a tabela de alunas 
-ordenada de forma crescente pela idade
+ordenada de forma crescente a-z pelo nome
 
 
 Passo 1: npm init -y

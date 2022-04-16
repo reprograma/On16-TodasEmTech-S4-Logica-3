@@ -418,46 +418,38 @@ Passo 8: Rodar projeto npm run start
 
 #### Calma! É só uma TAREFINHA DE CASA pra chamar de sua! Já treinamos bastante com nossos exemplos na aula!
 
-Vamos criar um sistema que armazena informações de livros para que seja possível gerenciar:
-  - os livros que já lemos e os livros que estão na nossa listinha de desejos
-  
+| Exemplo 01 | Descrição |
+| --- | --- |
+| `For/Break/Continue` | Utilize a estrutura de repetição for para imprimir no console  conforme instruções: 
+    a) números de 1 a 50  
+    b) quando chegar no número 25 interrompa a instrução e pare o loop 
+    c) quando chegar no número 10 pule a instrução|
+
+| Exemplo 02 | Descrição |
+| --- | --- |
+| `10 em 10` | Imprima na tela a partir de 20 e depois de 10 em 10 até o 100, mas em vez dos numeros 60 e 90 imprima a palavra "CONTINUE".|
+
+| Exemplo 03 | Descrição |
+| --- | --- |
+| `Tabuada` | Faça um programa que dado um número, imprime no (console.log) a tabuada do mesmo de 1 a 10. |
+
+| Exemplo 04 | Descrição |
+| --- | --- |
+| `Pares` |Imprima na tela os números pares existentes entre 0 e 100..|
+
+| Exemplo 05 | Descrição |
+| --- | --- |
+| `Fatorial` | Crie uma função que irá receber um número e retornar o fatorial dele. por exemplo:  3! = 3 * 2 * 1 // 6 |
 
 > Passo a passo:
-1) Crie uma pasta que irá conter os arquivos abaixo: 
-- README.md
-- app.js
-- database.js
-- Inicialize o npm :  npm init -y
-- Crie o script de start: 
-- Crie o script start no package.json:
-  "scripts": {
-    "start": "nodemon app.js"
-  }
-- Crie o .gitignore (node_modules)
-- instale as dependências nodemon e readline-sync: npm i --save readline-sync nodemon
+1) Crie um repositorio no github, clono e crio os arquivos abaixo:
+  -exemplo1.js
+  -exemplo2.js
+  -exemplo3.js
+  -exemplo4.js
+  -exemplo5.js
+  -README.md
 
-2) No arquivo database crie e exporte a sua base no formato array de objetos contendo alguns dos livros que você já leu ou gostaria de ler com os seguintes campos:
-
-```
-nome: string
-categoria: string
-paginas: number
-recomenda: boolean
-leu: boolean
-```
-
-3) No arquivo app.js desenvolva sua lógica para o comportamento abaixo: 
-  - deverá ser possível buscar livros pela categoria
-  - Me recomenda livros pra ler? 
-    Deverá listar livros que já foram lidos e que são recomendados 
-  - Minha lista de desejo:
-    Deverá listar livros que ainda não foram lidos 
-
-- Caso a pessoa usuária não escolha uma forma de busca, deverá mostrar todos os livros cadastrados, ordenados de forma crescente por quantidade de páginas.
-
-```
-O comportamento esperado deve ser o pedido da entrada e a impressão das tabelas buscadas, conforme instrução acima.
-```
 4) No README.md você já sabe, conte sobre sua experiência e aprendizados com esse projeto.
 
 5) A entrega é pelo classroom.

@@ -1,6 +1,6 @@
 | Exemplo 01 | Descrição |
 | --- | --- |
-| `criar e acessar valores (objeto e array` |Crie objetos e arrays e acesses os valors
+| `criar e acessar valores (objeto e array)` |Crie objetos e arrays e acesses os valores
     a) array lista de compras 
     b) objeto livro (nome, autora, pagina, anoPublicao, jaLeu)
     c) Criar um array com varios objetos de livros

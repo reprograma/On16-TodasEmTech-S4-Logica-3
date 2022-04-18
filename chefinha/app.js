@@ -1,2 +1,2 @@
 const alunas = require('./database')
-console.table(alunas)
+console.table(alunas.filter(aluna => aluna.idade > 30))

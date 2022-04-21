@@ -1,12 +1,16 @@
-ver os metodos:
+Revisar aula 3 e ver os metodos:
 
 find
 sort
 reduce
 
-vai finalizar o sistema de alunas e vai criar o sistema de livros
+Vamos finalizar o sistema de alunas e vai criar o sistema de livros
 
-Vamos criar um sistema que armazena informações de livros para que seja possível gerenciar:
+
+
+Vamos introduzir a leitura do projeto de sábado:
+
+um sistema que armazena informações de livros para que seja possível gerenciar:
   - os livros que já lemos e os livros que estão na nossa listinha de desejos
 
 - README.md

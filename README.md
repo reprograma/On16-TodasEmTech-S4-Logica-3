@@ -379,7 +379,7 @@ console.log(soma) //70
  - Execute apenas uma vez: npm run start (após isso ele fica olhando nosso código e atualizando a execução do node)
 
 
-## Exemplo chefão
+## Exemplo chefinha
 
 Vamos criar um sistema que armazena informações de algumas alunas matrículadas no formato abaixo:
 
@@ -422,8 +422,8 @@ Passo 8: Rodar projeto npm run start
 | --- | --- |
 | `For/Break/Continue` | Utilize a estrutura de repetição for para imprimir no console  conforme instruções: 
     a) números de 1 a 50  
-    b) quando chegar no número 25 interrompa a instrução e pare o loop 
-    c) quando chegar no número 10 pule a instrução|
+    b) números de 1 a 50, quando chegar no número 25 interrompa a instrução e pare o loop 
+    c) números de 1 a 50, quando chegar no número 10 pule a instrução|
 
 | Exemplo 02 | Descrição |
 | --- | --- |

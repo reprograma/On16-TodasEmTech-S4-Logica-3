@@ -31,14 +31,20 @@ const livros = [
 //funcao anonima
 //arrow function
 
-// const filtraLivrosQueJaLi = function(livro) {
-//   if(livro.jaLeu === true) {
-//     console.log(livro.nome)
-//   }
-// }
+const filtraLivrosQueJaLi = function(livro) {
+  if(livro.jaLeu === true) {
+    console.log(livro.nome)
+  }
+}
 
-// livros.filter(filtraLivrosQueJaLi)
+//arrow function // funcao de seta
 
+const livrosQueJaLi = livros.filter((livro) => {
+  if(livro.jaLeu === true) {
+    livro.nome
+  }
+})
+console.log(livrosQueJaLi)
 
 //map retorna um novo array com as informacoes 
 //que eu passar na minha funcao callback

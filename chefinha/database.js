@@ -38,3 +38,5 @@ const alunas = [
 ]
 
 module.exports = alunas
+
+console.log(alunas.sort((a,b) => a.idade - b.idade))
